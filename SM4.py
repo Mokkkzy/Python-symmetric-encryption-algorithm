@@ -1,5 +1,4 @@
 import json
-import profile
 
 from gmssl.sm4 import CryptSM4, SM4_ENCRYPT, SM4_DECRYPT
 import base64
