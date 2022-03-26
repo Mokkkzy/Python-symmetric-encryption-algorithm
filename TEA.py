@@ -49,7 +49,7 @@ class QQ_TEA():
             s -= delta
             s &= op
         return struct.pack(b'>LL', y, z)
-
+    @profile
     def encrypt(self,v):
         END_CHAR = b'\0'
         FILL_N_OR = 0xF8
@@ -72,7 +72,7 @@ class QQ_TEA():
             to = o
             r += tr
         return r
-    
+    @profile
     def decrypt(self,v):
         l = len(v)
         prePlain = self.decipher(v, secret_key)
