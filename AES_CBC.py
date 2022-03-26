@@ -13,6 +13,7 @@ def add_to_16(text):
 
 
 # 加密函数
+@profile
 def encrypt(text):
     key = '9999999999999999'.encode('utf-8')
     mode = AES.MODE_CBC
@@ -23,7 +24,7 @@ def encrypt(text):
     # 因为AES加密后的字符串不一定是ascii字符集的，输出保存可能存在问题，所以这里转为16进制字符串
     return b2a_hex(cipher_text)
 
-
+@profile
 # 解密后，去掉补足的空格用strip() 去掉
 def decrypt(text):
     key = '9999999999999999'.encode('utf-8')
