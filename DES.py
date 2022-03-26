@@ -3,6 +3,7 @@ import binascii
  
 # 秘钥
 KEY='mHAxsLYz'
+@profile
 def des_encrypt(s):
     """
     DES 加密
@@ -15,7 +16,7 @@ def des_encrypt(s):
     en = k.encrypt(s, padmode=PAD_PKCS5)
     return binascii.b2a_hex(en)
  
- 
+@profile
 def des_descrypt(s):
     """
     DES 解密
